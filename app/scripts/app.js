@@ -101,15 +101,15 @@ angular
         
   })
   .config(function Config($httpProvider, jwtOptionsProvider) {
-    Please note we're annotating the function so that the $injector works when the file is minified
-    jwtOptionsProvider.config({
-      whiteListedDomains:['localhost'],
-      tokenGetter: function() {
-        // token from user auth
-        var token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1OTAwMTUyMWU2YzQ4MjE2Y2NjMTdiZGMiLCJpYXQiOjE0OTMyNzYyOTYsImV4cCI6MTQ5MzM2MjY5NiwiaXNzIjoiZmVhdGhlcnMifQ.XXEEpKPCM-AGGX9DKml6lLycT1U6rA1stPAt9v9Bu54';
-        return token;
-      }
-    });
+    // Please note we're annotating the function so that the $injector works when the file is minified
+    // jwtOptionsProvider.config({
+    //   whiteListedDomains:['localhost'],
+    //   tokenGetter: function() {
+    //     // token from user auth
+    //     var token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1OTAwMTUyMWU2YzQ4MjE2Y2NjMTdiZGMiLCJpYXQiOjE0OTMyNzYyOTYsImV4cCI6MTQ5MzM2MjY5NiwiaXNzIjoiZmVhdGhlcnMifQ.XXEEpKPCM-AGGX9DKml6lLycT1U6rA1stPAt9v9Bu54';
+    //     return token;
+    //   }
+    // });
 
-    $httpProvider.interceptors.push('jwtInterceptor');
+    // $httpProvider.interceptors.push('jwtInterceptor');
   });
